@@ -16,18 +16,15 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 // Route definitions
 
-// TODO: Implement a route handler that returns a list of all posts, ordered by date created.
+// a route handler that returns a list of all posts, ordered by date created.
 app.get("/posts", async (req, res) => {
-    // res.send("TODO: GET /posts");
-
     const collection = db.collection("posts");
     const result = await collection.find({}).toArray()
     return res.json(result);
 });
 
-// TODO: Implement a route handler that creates a new post.
+// a route handler that creates a new post.
 app.post("/posts", async (req, res) => {
-    // res.send("TODO: POST /posts");
     const postBodyData = req.body;
     const collection = db.collection("posts");
     const newPost = {title: postBodyData.title, body: postBodyData.body, postedAt: new Date()};
@@ -39,9 +36,8 @@ app.post("/posts", async (req, res) => {
     }
 });
 
-// TODO: Implement a route handler that gets a post associated with a given postID.
+// a route handler that gets a post associated with a given postID.
 app.get("/posts/:postID", async (req, res) => {
-    // res.send("TODO: GET /posts/{postID}");
     const postID = req.params.postID;
     const collection = db.collection("posts");
     try {
@@ -52,9 +48,8 @@ app.get("/posts/:postID", async (req, res) => {
     }
 });
 
-// TODO: Implement a route handler that updates the post associated with a given postID.
+// a route handler that updates the post associated with a given postID.
 app.patch("/posts/:postID", async (req, res) => {
-    // res.send("TODO: PATCH /posts/{postID}");
     const postID = req.params.postID;
     const data = req.body;
     const collection = db.collection("posts");
@@ -66,9 +61,8 @@ app.patch("/posts/:postID", async (req, res) => {
     }
 });
 
-// TODO: Implement a route handler that deletes the post associated with a given postID.
+// a route handler that deletes the post associated with a given postID.
 app.delete("/posts/:postID", async (req, res) => {
-    // res.send("TODO: DELETE /posts/{postID}");
     const postID = req.params.postID;
     const collection = db.collection("posts");
     try {
@@ -79,9 +73,8 @@ app.delete("/posts/:postID", async (req, res) => {
     }
 });
 
-// TODO: Implement a route handler that gets all the comments associated with a given postID.
+// a route handler that gets all the comments associated with a given postID.
 app.get("/posts/:postID/comments", async (req, res) => {
-    // res.send("TODO: GET /posts/{postID}/comments");
     const postID = req.params.postID;
     const collection = db.collection("comments");
     try {
@@ -92,9 +85,8 @@ app.get("/posts/:postID/comments", async (req, res) => {
     }
 });
 
-// TODO: Implement a route handler that gets adds a comment to the post with the given postID.
+// a route handler that gets adds a comment to the post with the given postID.
 app.post("/posts/:postID/comments", async (req, res) => {
-    // res.send("TODO: POST /posts/{postID}/comments");
     const postID = req.params.postID;
     const postBodyData = req.body;
     const collection = db.collection("comments");
@@ -107,9 +99,8 @@ app.post("/posts/:postID/comments", async (req, res) => {
     }
 });
 
-// TODO: Implement a route handler that gets a comment associated with the given commentID.
+// a route handler that gets a comment associated with the given commentID.
 app.get("/posts/:postID/comments/:commentID", async (req, res) => {
-    // res.send("TODO: GET /posts/{postID}/comments/{commentID}");
     const commentID = req.params.commentID;
     const collection = db.collection("comments");
     try {
@@ -120,9 +111,8 @@ app.get("/posts/:postID/comments/:commentID", async (req, res) => {
     }
 });
 
-// TODO: Implement a route handler that updates a comment associated with the given commentID.
+// a route handler that updates a comment associated with the given commentID.
 app.patch("/posts/:postID/comments/:commentID", async (req, res) => {
-    // res.send("TODO: PATCH /posts/{postID}/comments");
     const commentID = req.params.commentID;
     const data = req.body;
     const collection = db.collection("comments");
@@ -134,9 +124,8 @@ app.patch("/posts/:postID/comments/:commentID", async (req, res) => {
     }
 });
 
-// TODO: Implement a route handler that deletes a comment associated with the given commentID.
+// a route handler that deletes a comment associated with the given commentID.
 app.delete("/posts/:postID/comments/:commentID", async (req, res) => {
-    // res.send("TODO: DELETE /posts/{postID}/comments");
     const commentID = req.params.commentID;
     const collection = db.collection("comments");
     try {
