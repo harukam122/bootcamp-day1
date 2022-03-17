@@ -1,1 +1,1 @@
-# Hi this is fsab bootcamp day 1! First time using VSCode hehe:)juy
+# Hi this is fsab bootcamp day 1! First time using VSCode hehe:)

@@ -9,7 +9,7 @@ interface Props {
 const Comment: FC<Props> = ({content, postedAt}) => {
     // TODO: Implement a Comment!
     return (
-        <Box fontSize={'sm' }lineHeight='tight' isTruncated>
+        <Box fontSize={'sm'} lineHeight='tight' isTruncated>
             {content}
             {postedAt.toString}
         </Box>

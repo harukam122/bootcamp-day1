@@ -24,7 +24,7 @@ const NewPostModal: FC<Props> = ({isOpen, onClose}) => {
         axios.post('http://localhost:8080/posts', {
             title: e.target.title.value,
             body: e.target.body.value,
-            createdAt: new Date(),
+            postedAt: new Date(),
           })
           .then(function (response) {
             console.log("succesfully posted!");
@@ -52,10 +52,7 @@ const NewPostModal: FC<Props> = ({isOpen, onClose}) => {
                     </ModalBody>
 
                     <ModalFooter>
-                    {/* <Button colorScheme='blue' mr={3} onClick={onClose}>
-                    Close
-                    </Button> */}
-                    <button type="submit">Submit Post</button>
+                        <button type="submit">Submit Post</button>
                     </ModalFooter>
                 </form>
             </ModalContent>
