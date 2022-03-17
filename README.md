@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Hi this is fsab bootcamp day 1! First time using VSCode hehe:)
-=======
 <h2>🧸 Mini-Blueno</h2>
 
 <pre>
